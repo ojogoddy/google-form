@@ -24,15 +24,15 @@ const Form = () => {
         }
     }
   return (
-    <div className="flex mt-5">
-        <div className="flex w-[25%] flex-col items-center border-t-2 text-[1rem] pl-3">
+    <div className="flex mt-5 bg-[#F0F1F3] ">
+        <div className="flex w-[25%] flex-col h-[25rem] m-10 text-[0.875rem] rounded-md   bg-[#fff] border-2 border-[#F0F1F3] shadow-2xl gap-6 pt-4">
         {formNav?.map((prop, index)=>(
-            <span className={`cursor-pointer font-medium rounded-sm ${active === index ? "text-[#3D6CF6]" : "text-black"}`} key={index} onClick={()=>setActive(index)} >
+            <span className={`cursor-pointer font-medium border-b-2 border-[#f0efef] px-10 pb-5  rounded-sm ${active === index ? "text-[#3D6CF6]" : "text-[#666666]"}`} key={index} onClick={()=>setActive(index)} >
                 {prop}
             </span>
         ))}
         </div>
-        <div className="w-full">{render()}</div>
+        <div className="w-full ">{render()}</div>
     </div>
   )
 }
